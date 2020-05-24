@@ -77,6 +77,7 @@ if (isset($_POST["boton"])) {
 
 
 ?>
+
 <?php
       require_once("bd/connection.php");
 	error_reporting(E_ALL ^ E_NOTICE);
@@ -100,7 +101,7 @@ if (isset($_POST["boton"])) {
 		}
 
 
-	    $sql="SELECT * FROM profesores WHERE cedula_profesor = '$alumno' AND voto = '0'";
+	    $sql="SELECT * FROM profesores WHERE cedula_alumno = '$alumno' AND voto = '0'";
 	    $resultado=mysqli_query ($cx,$sql);
 	    $datos=mysqli_fetch_array($resultado);
 	    $alu=$datos["cedula_alumno"];
@@ -133,6 +134,7 @@ if (isset($_POST["boton"])) {
 
 
 ?>
+
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-6 col-md-offset-3">
