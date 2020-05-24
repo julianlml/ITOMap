@@ -1,0 +1,4 @@
+SELECT alumnos.carrera, alumnos.cod_candidato,candidatos.nombre,  COUNT(alumnos.carrera) as votos
+from alumnos 
+join candidatos on candidatos.cod_candidato =alumnos.cod_candidato
+GROUP BY alumnos.carrera ,alumnos.cod_candidato, candidatos.nombre 
